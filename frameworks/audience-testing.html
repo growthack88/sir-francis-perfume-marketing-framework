@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audience Testing Framework - Sir Francis Perfumes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 1.5rem 1rem;
+            margin-bottom: 2rem;
+            border-radius: 0.3rem;
+        }
+        .card {
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-header {
+            font-weight: 600;
+            border-bottom: none;
+        }
+        .bg-primary-gradient {
+            background: linear-gradient(45deg, #3f51b5, #2196f3);
+        }
+        .text-white {
+            color: white !important;
+        }
+        .footer {
+            padding: 1.5rem 0;
+            background-color: #343a40;
+            color: #fff;
+            margin-top: 2rem;
+        }
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-top: none;
+            border-radius: 0 0 .25rem .25rem;
+        }
+        .nav-tabs .nav-link.active {
+            font-weight: bold;
+            color: #3f51b5;
+        }
+        .table th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2><i class="bi bi-people-fill me-2"></i>Audience Testing Framework</h2>
+                <a href="../index.html" class="btn btn-outline-light"><i class="bi bi-house-door me-1"></i>Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="mb-3">Overview</h3>
+                        <p>This audience testing framework provides a structured approach to testing different audience segments across TikTok, Snapchat, and Instagram platforms. The framework includes interest-based targeting, behavioral targeting, lookalike audiences, and retargeting strategies.</p>
+                        
+                        <div class="alert alert-primary">
+                            <strong>Campaign Name Format:</strong> SIRFRANCIS_AUDTEST_[PLATFORM]_[DATE]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs" id="audienceTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="interest-tab" data-bs-toggle="tab" data-bs-target="#interest" type="button" role="tab">Interest-Based</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="behavioral-tab" data-bs-toggle="tab" data-bs-target="#behavioral" type="button" role="tab">Behavioral</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="lookalike-tab" data-bs-toggle="tab" data-bs-target="#lookalike" type="button" role="tab">Lookalike</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="retargeting-tab" data-bs-toggle="tab" data-bs-target="#retargeting" type="button" role="tab">Retargeting</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="regional-tab" data-bs-toggle="tab" data-bs-target="#regional" type="button" role="tab">Regional</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content" id="audienceTabContent">
+                    <!-- Interest-Based Targeting -->
+                    <div class="tab-pane fade show active" id="interest" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header bg-primary-gradient text-white">
+                                <h5 class="mb-0">Interest-Based Targeting</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>Target audiences based on their demonstrated interests and affinities.</p>
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Audience Set</th>
+                                                <th>Target Group</th>
+                                                <th>Interests/Behaviors</th>
+                                                <th>Budget/Day</th>
+                                                <th>Success Metrics</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>A1_LUXURY</td>
+                                                <td>Luxury Shoppers</td>
+                                                <td>Luxury brands, premium shopping, high-end retail</td>
+                                                <td>150 SAR</td>
+                                                <td>CAC < 35 SAR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>A2_FRAGRANCE</td>
+                                                <td>Fragrance Enthusiasts</td>
+                                                <td>Perfumes, colognes, essential oils, aromatherapy</td>
+                                                <td>150 SAR</td>
+                                                <td>CAC < 35 SAR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>A3_GIFTING</td>
+                                                <td>Gift Purchasers</td>
+                                                <td>Gift shopping, special occasions, celebrations</td>
+                                                <td>150 SAR</td>
+                                                <td>CAC < 35 SAR</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <h6>Implementation Notes:</h6>
+                                    <ul>
+                                        <li>Test each interest group individually before combining</li>
+                                        <li>Monitor frequency and audience fatigue</li>
+                                        <li>Consider platform-specific interest targeting options</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Behavioral Targeting -->
+                    <div class="tab-pane fade" id="behavioral" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header bg-primary-gradient text-white">
+                                <h5 class="mb-0">Behavioral Targeting</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>Target audiences based on their online behaviors and actions.</p>
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Audience Set</th>
+                                                <th>Target Group</th>
+                                                <th>Behaviors</th>
+                                                <th>Budget/Day</th>
+                                                <th>Success Metrics</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>B1_SHOPPERS</td>
+                                                <td>Active Shoppers</td>
+                                                <td>Online purchases (30 days), add to cart activities</td>
+                                                <td>200 SAR</td>
+                                                <td>CAC < 35 SAR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>B2_ENGAGEMENT</td>
+                                                <td>Content Engagers</td>
+                                                <td>Video viewers, ad engagers, social media engagers</td>
+                                                <td>200 SAR</td>
+                                                <td>CAC < 35 SAR</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <h6>Implementation Notes:</h6>
+                                    <ul>
+                                        <li>Behavioral targeting tends to have higher intent than interest targeting</li>
+                                        <li>Ensure proper pixel implementation for accurate behavioral tracking</li>
+                                        <li>Consider recency of behaviors when building audiences</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Lookalike Audiences -->
+                    <div class="tab-pane fade" id="lookalike" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header bg-primary-gradient text-white">
+                                <h5 class="mb-0">Lookalike Audiences</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>Build audiences that share characteristics with your existing high-value customers.</p>
+                                
+                                <div class="alert alert-warning">
+                                    <i class="bi bi-exclamation-triangle me-2"></i>Important: Implement after gathering sufficient data
+                                </div>
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Audience Set</th>
+                                                <th>Source Audience</th>
+                                                <th>Expansion</th>
+                                                <th>Budget/Day</th>
+                                                <th>Success Metrics</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>L1_PURCHASERS</td>
+                                                <td>Past Purchasers</td>
+                                                <td>1% LAL</td>
+                                                <td>250 SAR</td>
+                                                <td>CAC < 35 SAR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>L2_HIGHVALUE</td>
+                                                <td>High-Value Customers</td>
+                                                <td>1% LAL</td>
+                                                <td>250 SAR</td>
+                                                <td>CAC < 35 SAR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>L3_ENGAGEMENT</td>
+                                                <td>Website Visitors</td>
+                                                <td>2% LAL</td>
+                                                <td>200 SAR</td>
+                                                <td>CAC < 35 SAR</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card bg-light">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Source Audience Requirements</h6>
+                                                    <ul>
+                                                        <li>Minimum 1,000 users for effective LAL creation</li>
+                                                        <li>Quality over quantity for source audiences</li>
+                                                        <li>Recent data (last 90-180 days) performs best</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card bg-light">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Platform Considerations</h6>
+                                                    <ul>
+                                                        <li>TikTok: 1% LAL ~200K users in Saudi</li>
+                                                        <li>Snapchat: Smaller LAL sizes but higher precision</li>
+                                                        <li>Instagram: Most mature LAL technology</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Retargeting -->
+                    <div class="tab-pane fade" id="retargeting" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header bg-primary-gradient text-white">
+                                <h5 class="mb-0">Retargeting</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>Re-engage users who have previously interacted with your brand or website.</p>
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Audience Set</th>
+                                                <th>Source</th>
+                                                <th>Window</th>
+                                                <th>Budget/Day</th>
+                                                <th>Success Metrics</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>R1_CART</td>
+                                                <td>Cart Abandoners</td>
+                                                <td>7 Days</td>
+                                                <td>100 SAR</td>
+                                                <td>ROAS > 8x</td>
+                                            </tr>
+                                            <tr>
+                                                <td>R2_PRODUCT</td>
+                                                <td>Product Page Viewers</td>
+                                                <td>14 Days</td>
+                                                <td>100 SAR</td>
+                                                <td>ROAS > 6x</td>
+                                            </tr>
+                                            <tr>
+                                                <td>R3_VISITORS</td>
+                                                <td>All Site Visitors</td>
+                                                <td>30 Days</td>
+                                                <td>100 SAR</td>
+                                                <td>ROAS > 5x</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <h6>Retargeting Best Practices:</h6>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card bg-light h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text-center"><i class="bi bi-calendar-check me-2"></i>Timing</h6>
+                                                    <ul>
+                                                        <li>Recency matters - prioritize recent visitors</li>
+                                                        <li>Test different window periods</li>
+                                                        <li>Consider frequency capping</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card bg-light h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text-center"><i class="bi bi-chat-right-text me-2"></i>Messaging</h6>
+                                                    <ul>
+                                                        <li>Use specific messaging based on intent</li>
+                                                        <li>Consider special offers for cart abandoners</li>
+                                                        <li>Address common objections</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card bg-light h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text-center"><i class="bi bi-gear me-2"></i>Technical Setup</h6>
+                                                    <ul>
+                                                        <li>Ensure proper pixel implementation</li>
+                                                        <li>Set up event-specific audiences</li>
+                                                        <li>Apply exclusions for purchasers</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Regional Considerations -->
+                    <div class="tab-pane fade" id="regional" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header bg-primary-gradient text-white">
+                                <h5 class="mb-0">Regional Considerations</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>Tailor your targeting approach based on regional differences within Saudi Arabia.</p>
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Region</th>
+                                                <th>Targeting Approach</th>
+                                                <th>Notes</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Riyadh</td>
+                                                <td>High Priority</td>
+                                                <td>Largest market, cultural connection</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jeddah</td>
+                                                <td>Urban Luxury</td>
+                                                <td>Cosmopolitan audience</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Eastern Province</td>
+                                                <td>Oil Industry</td>
+                                                <td>Higher income demographics</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Secondary Cities</td>
+                                                <td>Value Proposition</td>
+                                                <td>Focus on exclusivity</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <h6>Gender Strategy</h6>
+                                    <p>Test both dedicated campaigns and combined approaches:</p>
+                                    <ul>
+                                        <li>Male-specific campaigns (masculine fragrances)</li>
+                                        <li>Female-specific campaigns (feminine fragrances)</li>
+                                        <li>Unisex campaigns (with segmentation at ad level)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        <h5 class="mb-0">Testing Rules</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Minimum test duration
+                                        <span class="badge bg-primary rounded-pill">7 days</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Minimum impressions per audience
+                                        <span class="badge bg-primary rounded-pill">1,000</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Minimum clicks for statistical significance
+                                        <span class="badge bg-primary rounded-pill">100</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card bg-light h-100">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Additional Guidelines</h6>
+                                        <ul>
+                                            <li>Use clear naming convention for accurate tracking</li>
+                                            <li>Utilize control audiences for valid comparison</li>
+                                            <li>Only test one variable at a time</li>
+                                            <li>Document all test results thoroughly</li>
+                                            <li>Apply learnings to future campaigns</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Sir Francis Perfumes - Audience Testing Framework</p>
+            <p><small>عطورنا تمزج بين الابتكار المتجذر في قلب الرياض واللمسة البريطانية الراقية، مع أرقى الزيوت العطرية المستقدمة من فرنسا وإيطاليا، لتمنحك ثباتًا وجودة لا مثيل لهما.</small></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
